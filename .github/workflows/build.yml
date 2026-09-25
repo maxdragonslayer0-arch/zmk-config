@@ -1,3 +1,7 @@
-include:
-  - board: nice_nano//zmk
-    shield: jd40
+name: Build ZMK firmware
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
